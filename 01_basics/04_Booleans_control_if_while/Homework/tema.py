@@ -27,3 +27,5 @@ if count == len(phone_number):
 my_name = "diana"
 input_name = input("Please insert your name: ")
 print(my_name == input_name.lower())
+
+
