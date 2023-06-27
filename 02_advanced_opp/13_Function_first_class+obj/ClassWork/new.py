@@ -4,12 +4,13 @@ def calc(operation, a, b):
         "substract": lambda a, b: a - b,
         "multiply": lambda a, b: a * b,
     }
-    # print(funcs.keys())
-    # test = lambda funcs, operation: operation not in funcs.keys()
-    if lambda: operation not in funcs.keys():
-        print("The operation is not defined")
-        return
-    return funcs[operation](a, b)
+    print(funcs.keys())
+    test = lambda f, o: o not in f.keys()
+    return funcs[operation](a, b) if test(funcs, operation) else "The operation is not defined"
+    # if test(funcs, operation):
+    #     print("The operation is not defined")
+    #     return
+    # return funcs[operation](a, b)
 
 taskuri = [
     ("add", 1, 0),
@@ -21,3 +22,5 @@ taskuri = [
 
 for task in taskuri:
     print(task, calc(*task))
+
+print(calc.__code__.co_varnames)

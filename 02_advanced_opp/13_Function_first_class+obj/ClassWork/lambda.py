@@ -1,6 +1,3 @@
-def calc(operation, a, b):
-    return funcs[operation](a, b)
-
 
 def lam(a, b):
     return a + b
@@ -15,8 +12,11 @@ def functie(x):
     if x % 2 == 0:
         return True
     return False
+
+functie2 = lambda x: x % 2 == 0
+
 print(list(filter(
-    lambda x: x % 2 == 0,
+    functie2,
     numere
 )))
 
@@ -24,3 +24,16 @@ print(list(filter(
     functie,
     numere
 )))
+
+######################
+def functie(x):
+    if x % 2 == 0:
+        return True
+    return False
+lista_noua = []
+for item in numere:
+    if functie(item):
+        lista_noua.append(item)
+
+print(lista_noua)
+#######################

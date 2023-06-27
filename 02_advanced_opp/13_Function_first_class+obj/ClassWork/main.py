@@ -9,3 +9,8 @@ temp()
 
 print(temp())
 print(temp()())
+
+# x = 2
+# test = 'ana'
+# print(eval('x'))
+# print(eval('test'))
